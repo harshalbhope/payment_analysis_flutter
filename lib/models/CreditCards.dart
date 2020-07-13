@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CreditCards {
@@ -12,7 +11,7 @@ class CreditCards {
 
 List<CreditCards> creditcards = [
   CreditCards(
-      balance: '2000', cardNo: '1123', cardName: 'HDFC', color: Colors.black),
+      balance: '2000', cardNo: '1123', cardName: 'HDFC', color: Colors.grey),
   CreditCards(
       balance: '3000', cardNo: '543', cardName: 'HDFC', color: Colors.yellow),
   CreditCards(
