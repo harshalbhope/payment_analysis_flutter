@@ -60,6 +60,28 @@ class _LineChartSample2State extends State<LineChartSample2> {
 
   LineChartData mainData() {
     return LineChartData(
+      lineTouchData: LineTouchData(
+        getTouchedSpotIndicator: (barData, spotIndexes) => spotIndexes.map((e) {
+          return TouchedSpotIndicatorData(
+            FlLine(color: Color(0xfff9544e), strokeWidth: 2),
+            FlDotData(
+              getDotPainter: (spot, percent, barData, index) {
+                return FlDotCirclePainter(
+                    radius: 2,
+                    color: Color(0xfff9544e),
+                    strokeColor: Colors.white);
+              },
+            ),
+          );
+        }).toList(),
+        enabled: true,
+        touchTooltipData: LineTouchTooltipData(
+            // getTooltipItems: (touchedSpots) {
+            //   return touchedSpots.;
+            // },
+            tooltipRoundedRadius: 10.0,
+            tooltipBgColor: Color(0xfff9544e)),
+      ),
       gridData: FlGridData(
         show: true,
         drawVerticalLine: false,
