@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payment_analysis_flutter/Widgets/bottomContainer.dart';
+import 'package:money2/money2.dart';
+import 'package:payment_analysis_flutter/constants.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -64,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         children: <Widget>[
                           Text(
-                            "4333 ",
+                            Money.fromInt(4500, ind).toString(),
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 45.0,

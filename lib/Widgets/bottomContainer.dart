@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:money2/money2.dart';
+import 'package:payment_analysis_flutter/constants.dart';
 import 'package:payment_analysis_flutter/models/CreditCards.dart';
 import 'package:payment_analysis_flutter/models/TransactionService.dart';
 
@@ -70,7 +72,8 @@ class BottomContainer extends StatelessWidget {
                             height: 5.0,
                           ),
                           Text(
-                            creditcard.balance,
+                            Money.fromString(creditcard.balance, ind)
+                                .toString(),
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 20.0,
@@ -164,7 +167,8 @@ class BottomContainer extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: <Widget>[
                             Text(
-                              transaction.serviceCost,
+                              Money.fromString(transaction.serviceCost, ind)
+                                  .toString(),
                               style: TextStyle(
                                   fontSize: 20.0, fontWeight: FontWeight.w400),
                             ),
