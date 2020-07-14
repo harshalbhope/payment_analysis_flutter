@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Column(
                         children: <Widget>[
                           Text(
-                            Money.fromInt(4500, ind).toString(),
+                            Money.fromInt(4500000, ind).toString(),
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: 45.0,
@@ -87,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            BottomContainer(),
+            // BottomContainer(),
           ],
         ),
       ),
