@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:payment_analysis_flutter/Screens/DetailScreen.dart';
 import 'package:payment_analysis_flutter/Screens/HomeScreen.dart';
 import 'package:payment_analysis_flutter/sample.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primaryColorLight: Colors.white,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: LineChartSample2(),
+      home: DetailScreen(),
     );
   }
 }

@@ -76,21 +76,29 @@ class _LineChartSample2State extends State<LineChartSample2> {
         }).toList(),
         enabled: true,
         touchTooltipData: LineTouchTooltipData(
-            // getTooltipItems: (touchedSpots) {
-            //   return touchedSpots.;
-            // },
-            tooltipRoundedRadius: 10.0,
-            tooltipBgColor: Color(0xfff9544e)),
+          getTooltipItems: (touchedSpots) {
+            return touchedSpots.map((e) {
+              return LineTooltipItem(
+                '${e.y}',
+                const TextStyle(color: Colors.white),
+              );
+            }).toList();
+          },
+          tooltipPadding: EdgeInsets.all(8.0),
+          tooltipBottomMargin: 4.0,
+          tooltipRoundedRadius: 10.0,
+          tooltipBgColor: Color(0xfff9544e),
+        ),
       ),
       gridData: FlGridData(
         show: true,
-        drawVerticalLine: false,
         getDrawingHorizontalLine: (value) {
           return FlLine(
             color: const Color(0xfffdd5d3),
             strokeWidth: 0.8,
           );
         },
+        drawVerticalLine: false,
         getDrawingVerticalLine: (value) {
           return FlLine(
             color: const Color(0xff37434d),
