@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payment_analysis_flutter/Screens/HomeScreen.dart';
 import 'package:payment_analysis_flutter/Widgets/bottomContainer.dart';
+import 'package:payment_analysis_flutter/models/Category.dart';
 
 class DetailScreen extends StatefulWidget {
   @override
@@ -22,6 +23,11 @@ class _DetailScreenState extends State<DetailScreen> {
               child: Column(
                 children: <Widget>[
                   ClickMoreContainer(title: 'Category'),
+                  BottomList(
+                    items: categories,
+                    item: Category,
+                    screenNo: 1,
+                  ),
                 ],
               ),
             )

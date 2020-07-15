@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Stack(
           children: <Widget>[
             UpperContainer(ratio: 0.45, visible: true),
-            // BottomContainer(),
+            BottomContainer(),
           ],
         ),
       ),
