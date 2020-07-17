@@ -27,31 +27,42 @@ class _LineChartSample2State extends State<LineChartSample2> {
                   color: Colors.white),
               child: Padding(
                 padding: const EdgeInsets.only(
-                    right: 18.0, left: 12.0, top: 24, bottom: 12),
+                    right: 18.0, left: 20.0, top: 40, bottom: 12),
                 child: LineChart(
                   showAvg ? avgData() : mainData(),
                 ),
               ),
             ),
             SizedBox(
-              width: 60,
-              height: 34,
-              child: FlatButton(
-                onPressed: () {
-                  setState(() {
-                    showAvg = !showAvg;
-                  });
-                },
-                child: Text(
-                  'avg',
-                  style: TextStyle(
-                      fontSize: 12,
-                      color: showAvg
-                          ? Colors.white.withOpacity(0.5)
-                          : Colors.white),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Text(
+                      '5,323',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    // Spacer(),
+                    Text(
+                      '5,323',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ],
                 ),
               ),
             ),
+            // SizedBox(
+            //   width: 70,
+            //   height: 60,
+            //   child: FlatButton(
+            //     onPressed: () {},
+            //     child: Text(
+            //       'avg',
+            //       style: TextStyle(fontSize: 15, color: Colors.black),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
