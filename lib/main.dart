@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:payment_analysis_flutter/Screens/DetailScreen.dart';
 import 'package:payment_analysis_flutter/Screens/HomeScreen.dart';
+import 'package:payment_analysis_flutter/sample.dart';
 
 void main() {
   runApp(MyApp());
