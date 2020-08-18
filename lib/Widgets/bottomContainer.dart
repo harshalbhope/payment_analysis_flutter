@@ -42,6 +42,7 @@ class BottomContainer extends StatelessWidget {
           Container(
             height: 200,
             child: ListView.builder(
+              shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemCount: creditcards.length,
               itemBuilder: (context, index) {
@@ -135,6 +136,7 @@ class BottomList extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(left: 20.0, right: 20.0),
         child: ListView.builder(
+          shrinkWrap: true,
           itemCount: items.length,
           itemBuilder: (context, index) {
             item = items[index];

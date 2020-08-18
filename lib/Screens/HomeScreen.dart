@@ -34,7 +34,10 @@ class UpperContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * ratio,
+      constraints: BoxConstraints.expand(
+        height: MediaQuery.of(context).size.height * ratio,
+      ),
+      // height: MediaQuery.of(context).size.height * ratio,
       decoration: BoxDecoration(
         color: Theme.of(context).primaryColorDark,
         borderRadius: BorderRadius.only(
