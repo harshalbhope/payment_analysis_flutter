@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class Transactions {
-  String service;
+  String serviceName;
   String serviceSection;
   String serviceCost;
   String date;
@@ -10,7 +10,7 @@ class Transactions {
 
   Transactions(
       {this.date,
-      this.service,
+      this.serviceName,
       this.serviceCost,
       this.serviceSection,
       this.serviceIcon});
@@ -19,35 +19,35 @@ class Transactions {
 List<Transactions> transactions = [
   Transactions(
     date: 'Mar 20',
-    service: 'Dribble',
+    serviceName: 'Dribble',
     serviceCost: '400',
     serviceSection: 'Pro',
     serviceIcon: MdiIcons.dribbble,
   ),
   Transactions(
     date: 'Mar 21',
-    service: 'Netflix',
+    serviceName: 'Netflix',
     serviceCost: '350',
     serviceSection: 'Premium',
     serviceIcon: MdiIcons.netflix,
   ),
   Transactions(
     date: 'Mar 22',
-    service: 'Spotify',
+    serviceName: 'Spotify',
     serviceCost: '300',
     serviceSection: 'Premium',
     serviceIcon: MdiIcons.spotify,
   ),
   Transactions(
     date: 'Mar 23',
-    service: 'Amazon',
+    serviceName: 'Amazon',
     serviceCost: '200',
     serviceSection: 'VIP',
     serviceIcon: MdiIcons.amazon,
   ),
   Transactions(
     date: 'Mar 24',
-    service: 'Hotstar',
+    serviceName: 'Hotstar',
     serviceCost: '600',
     serviceSection: 'Ultra',
     serviceIcon: MdiIcons.hospital,
